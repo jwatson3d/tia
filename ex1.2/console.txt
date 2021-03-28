@@ -446,7 +446,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 # aws_instance.helloworld:
 resource "aws_instance" "helloworld" {
     ami                          = "ami-089c6f2e3866f0f14"
-    arn                          = "arn:aws:ec2:us-east-2:625748707425:instance/i-0b018e8a8690ef615"
+    arn                          = "arn:aws:ec2:us-east-2:************:instance/i-0b018e8a8690ef615"
     associate_public_ip_address  = true
     availability_zone            = "us-east-2c"
     cpu_core_count               = 1
@@ -513,7 +513,7 @@ Terraform will perform the following actions:
   # aws_instance.helloworld will be destroyed
   - resource "aws_instance" "helloworld" {
       - ami                          = "ami-089c6f2e3866f0f14" -> null
-      - arn                          = "arn:aws:ec2:us-east-2:625748707425:instance/i-0b018e8a8690ef615" -> null
+      - arn                          = "arn:aws:ec2:us-east-2:************:instance/i-0b018e8a8690ef615" -> null
       - associate_public_ip_address  = true -> null
       - availability_zone            = "us-east-2c" -> null
       - cpu_core_count               = 1 -> null
