@@ -1,3 +1,6 @@
+# Apple cruft
+.DS_Store
+
 # Local .terraform directories
 **/.terraform/*
 
@@ -27,3 +30,11 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+
+# VS Code files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

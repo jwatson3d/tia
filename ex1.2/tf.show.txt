@@ -1,0 +1,57 @@
+# aws_instance.helloworld:
+resource "aws_instance" "helloworld" {
+    ami                          = "ami-089c6f2e3866f0f14"
+    arn                          = "arn:aws:ec2:us-east-2:625748707425:instance/i-0b018e8a8690ef615"
+    associate_public_ip_address  = true
+    availability_zone            = "us-east-2c"
+    cpu_core_count               = 1
+    cpu_threads_per_core         = 1
+    disable_api_termination      = false
+    ebs_optimized                = false
+    get_password_data            = false
+    hibernation                  = false
+    id                           = "i-0b018e8a8690ef615"
+    instance_state               = "running"
+    instance_type                = "t2.micro"
+    ipv6_address_count           = 0
+    ipv6_addresses               = []
+    monitoring                   = false
+    primary_network_interface_id = "eni-00015a9572e9ee40a"
+    private_dns                  = "ip-172-31-34-24.us-east-2.compute.internal"
+    private_ip                   = "172.31.34.24"
+    public_dns                   = "ec2-3-138-112-237.us-east-2.compute.amazonaws.com"
+    public_ip                    = "3.138.112.237"
+    security_groups              = [
+        "default",
+    ]
+    source_dest_check            = true
+    subnet_id                    = "subnet-7968dd35"
+    tags                         = {
+        "Name" = "HelloWorld"
+    }
+    tenancy                      = "default"
+    volume_tags                  = {}
+    vpc_security_group_ids       = [
+        "sg-d8939bb8",
+    ]
+
+    credit_specification {
+        cpu_credits = "standard"
+    }
+
+    metadata_options {
+        http_endpoint               = "enabled"
+        http_put_response_hop_limit = 1
+        http_tokens                 = "optional"
+    }
+
+    root_block_device {
+        delete_on_termination = true
+        device_name           = "/dev/xvda"
+        encrypted             = false
+        iops                  = 100
+        volume_id             = "vol-0774bc344877439e9"
+        volume_size           = 8
+        volume_type           = "gp2"
+    }
+}
